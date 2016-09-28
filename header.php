@@ -25,7 +25,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container main-container">
+<div class="container-fluid main-container">
 	<header>
 		<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.jpg" alt="logo" class="logo"> 
 	</a> -->

@@ -72,6 +72,59 @@ function kathyk_setup() {
 endif;
 add_action( 'after_setup_theme', 'kathyk_setup' );
 
+// function wpb_list_child_pages() { 
+
+// global $post;
+
+// $parent = $post->post_parent;  
+// $get_grandparent = get_post($parent);
+// $grandparent = $get_grandparent->post_parent;
+
+// if ( is_page() && $post->post_parent && $grandparent)
+
+// 	$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' ) . 'the if aka this page has a a parent and a grandparent' ;
+// elseif( is_page() && $post->post_parent )
+// 	$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' ) . 'the else if aka this page has a parent' ;
+
+// else
+// 	$childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' .  $post->ID . '&echo=0' ) . 'the else aka this page has no parent';
+
+// if ( $childpages ) {
+
+// 	$string = '<div class="sub-cats"><ul>' . $childpages . '</ul></div>';
+// }
+
+// echo $string;
+
+// }
+
+// add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+//Featured Images for Blog
+
+function get_images_by_cat($id){
+    $limit = 1000;
+
+    $the_query = new WP_Query("posts_per_page={$limit}&cat={$id}");
+    $arr = array();
+    while ( $the_query->have_posts() ) { 
+        $the_query->the_post();
+
+        $title = get_the_title();
+        $image_src = get_field('banner_image');
+        $image_link = get_field('banner_link');
+
+        $arr[] = array(
+            "title" => $title,
+            "link" => $image_link,
+            "image" => $image_src,
+        );
+    }
+
+    wp_reset_query();
+
+    return $arr;    
+}
 
 
 /**

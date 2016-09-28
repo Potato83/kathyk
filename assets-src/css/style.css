@@ -1,0 +1,155 @@
+body{
+	/*background: #ccc;*/
+	overflow-x: hidden;
+	background: url('../img/kkbio.jpg');
+	background-size: cover;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+/*.site-content{
+	margin: 0;
+	padding: 0;
+}
+
+section{
+	margin: 0;
+	padding: 0;
+}*/
+
+.logged-in .navbar-fixed-top{
+	top: 32px;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ccc;
+  border-radius: 1px;
+}
+
+ul, li{
+	list-style: none;
+}
+
+li{
+	display: inline-block;
+}
+
+ul.navbar-nav{	
+	/*background: red;*/
+	width: 100%;	
+	text-align: center;
+}
+
+ul.navbar-nav > li{
+	display: inline-block;
+	float: none;
+}
+
+.sub-cats{
+	width: 200px;
+	background: red;
+	position: relative;
+	top: 80px;
+	left: 0;
+	padding: 20px;
+}
+
+.sub-cats > ul{
+	/*list-style: none;*/
+	padding-left: 0;
+}
+
+.sub-cats > ul > li{
+	padding: 10px 0;
+}
+
+.padder{
+	width: 100%;
+	height: 50px;
+}
+
+li.current-menu-item{
+	background: green;
+}
+
+li.current_page_item{
+	background: red;
+}
+
+li.current-page-ancestor{
+	background: yellow;
+}
+
+li.current_page_ancestor{
+	background: blue;
+}
+
+.middle-cat{
+	/*background: blue;*/
+	/*padding: 0;*/
+	text-align: center;
+}
+
+.middle-cat > li,
+.bottom-cat > li{
+	
+	padding: 0 20px;
+}
+
+aside{
+	/*background: blue;*/
+	width: 20%;
+	float: left;
+	padding: 0;
+	/*height: 100%;*/
+}
+
+.bottom-cat{
+	padding: 0;
+}
+
+.bottom-cat > li{
+	display: block;
+}
+
+.sub-container{
+	background: rgba(0,255,0,0.5);
+	width: 60%;
+	padding: 20px;
+	float: left;
+}
+
+.sub-container-home{
+	background: rgba(100,255,200,0.5);
+	width: 60%;
+	padding: 20px;
+	float: left;
+}
+
+/* HOME PAGE */
+.homepage{
+	
+}
+
+/* BLOG POSTS */
+.thum{
+	float: left;
+	background: blue;
+	/*padding: 20px;*/
+	width: 30%;
+}
+
+
+.with-thum{
+	background: red;
+	float: left;
+	width: 70%;
+}
+
+.no-thum{
+	width: 100%;
+	background: yellow;
+}
