@@ -4,8 +4,9 @@ Template Name: Grand Children
  */
 get_header(); ?>
 <div class="padder"></div>
-<!-- <h1>this is the grand children template aka page-bottom.php</h1> -->
+<div class="padder"></div>
 
+<!-- <h1>this is the grand children template aka page-bottom.php</h1> -->
 <?php
         
     $parent = $post->post_parent;
@@ -15,9 +16,6 @@ get_header(); ?>
 
     $siblings =  get_pages('child_of='.$parent);
 
-    
-
-    
         $args = array(
              'depth' => 1,
              'title_li' => '',
@@ -36,6 +34,7 @@ get_header(); ?>
          </ul>
      </div>
     <?php } ?>
+
 <!-- <h3>Grand Children</h3> -->
 <aside>
 <?php
@@ -44,9 +43,6 @@ get_header(); ?>
 
     $siblings =  get_pages('child_of='.$parent);
 
-    
-
-    
         $args = array(
              'depth' => 1,
              'title_li' => '',
@@ -67,6 +63,8 @@ get_header(); ?>
     <?php } ?>
 </aside>
 <div class="sub-container">
+<?php wp_reset_postdata(); ?>
+<?php get_template_part('content', 'images'); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 					
 	<?php the_content(); ?>

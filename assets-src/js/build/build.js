@@ -2369,3 +2369,4 @@ $(function() {
 $('#test').click(function(){
 	alert('Javascript and jQuery are working');
 });
+

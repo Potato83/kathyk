@@ -4,6 +4,8 @@ Template Name: Orphan Children
  */
 get_header(); ?>
 <div class="padder"></div>
+<div class="padder"></div>
+<div class="padder"></div>
 <!-- <h1>this is the grand children template aka page-bottom.php</h1> -->
 
 <?php
@@ -67,6 +69,8 @@ get_header(); ?>
     <?php } ?>
 </aside>
 <div class="sub-container">
+<?php wp_reset_postdata(); ?>
+<?php get_template_part('content', 'images'); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 					
 	<?php the_content(); ?>

@@ -5,7 +5,9 @@
 ?>
 <?php get_header(); ?>
 <div class="padder"></div>
-<aside>
+<div class="padder"></div>
+<!-- <div class="padder"></div> -->
+<aside class="sneaky-aside">
 &nbsp;
 </aside>
 <div class="sub-container-home">
@@ -17,7 +19,7 @@
 
 	<h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
 	<?php the_excerpt(); ?>
-
+	<hr>
 	<?php endwhile; ?>
 
 	<?php if ($paged > 1) { ?>

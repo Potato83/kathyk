@@ -6,11 +6,13 @@ get_header(); ?>
 
 <section class="homepage">
 	<div class="padder"></div>
-	<aside>
+	<div class="padder"></div>
+	<aside class="sneaky-aside">
 	&nbsp;
 	</aside>
 	<div class="sub-container-home">
-	
+	<?php wp_reset_postdata(); ?>
+	<?php get_template_part('content', 'images'); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 						
 		<?php the_content(); ?>

@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/css/style.min.css" />
 <link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/css/font-awesome/css/font-awesome.min.css" />
-
+<link href="https://fonts.googleapis.com/css?family=Actor" rel="stylesheet">
 <?php wp_head(); ?>
 <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

@@ -2,11 +2,21 @@ body{
 	/*background: #ccc;*/
 	overflow-x: hidden;
 	background: url('../img/kkbio.jpg');
+	/*background: #ddd;*/
 	background-size: cover;
+	background-attachment: fixed;
 	min-height: 100vh;
 	width: 100vw;
+	font-family: 'Actor', sans-serif;
 }
 
+p{
+	font-size: 18px;
+}
+
+a{
+	color: #222;
+}
 /*.site-content{
 	margin: 0;
 	padding: 0;
@@ -16,6 +26,10 @@ section{
 	margin: 0;
 	padding: 0;
 }*/
+
+a:hover{
+	text-decoration: none;
+}
 
 .logged-in .navbar-fixed-top{
 	top: 32px;
@@ -35,10 +49,11 @@ ul, li{
 
 li{
 	display: inline-block;
+	text-transform:uppercase;
 }
 
 ul.navbar-nav{	
-	/*background: red;*/
+	background: #ccc;
 	width: 100%;	
 	text-align: center;
 }
@@ -75,33 +90,82 @@ li.current-menu-item{
 	background: green;
 }
 
-li.current_page_item{
-	background: red;
-}
-
+#menu-primary > li.current_page_item,
 li.current-page-ancestor{
-	background: yellow;
+	background: #fff;
 }
 
-li.current_page_ancestor{
-	background: blue;
+#menu-primary > li.current_page_item:after,
+#menu-primary > li.current-page-ancestor:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6; 
+  border-bottom: solid 3px #0208ae;
+  transform: scaleX(1); 
 }
+
+li:hover {
+	cursor: pointer;
+}
+
+#menu-primary > li:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+#menu-primary > li:hover:after { 
+	transform: scaleX(1); 
+}
+
+/*li.current_page_ancestor{
+	background: pink;
+}*/
 
 .middle-cat{
-	/*background: blue;*/
+	background: #bbb;
+	background: rgba(187,187,187,0.7);
 	/*padding: 0;*/
-	text-align: center;
+	/*text-align: center;*/
+	border-radius: 5px;
+	width: 80%;
 }
 
-.middle-cat > li,
+.middle-cat > li{	
+	padding: 10px 30px;
+	/*border-radius: 5%;*/
+}
+
+.middle-cat > li.current_page_item,
+.middle-cat > li.current_page_ancestor{
+	background: #eee;
+	background: rgba(238, 238, 238,0.5);
+}
+
+.middle-cat > li:hover{
+	background: #c9c1c1;
+	background: rgba(201, 193, 193,0.5);
+}
+
 .bottom-cat > li{
-	
-	padding: 0 20px;
+	padding: 15px 10px;
+}
+
+.bottom-cat > li.current_page_item{
+	background: rgba(200,200,200,0.8);
+}
+
+.bottom-cat > li:hover{
+	background: #bbb;
+	background: rgba(187,187,187,0.5);
 }
 
 aside{
-	/*background: blue;*/
-	width: 20%;
+	background: #aaa;
+	background: rgba(187,187,187,0.7);
+	width: 18%;
+	margin-right: 2%;
 	float: left;
 	padding: 0;
 	/*height: 100%;*/
@@ -117,16 +181,24 @@ aside{
 
 .sub-container{
 	background: rgba(0,255,0,0.5);
+	background: rgba(195, 207, 201,0.5);
+	border-radius: 15px;
+	color: #111;
 	width: 60%;
 	padding: 20px;
 	float: left;
 }
 
+.sub-container p {
+	font-size: 22px;
+}
+
 .sub-container-home{
-	background: rgba(100,255,200,0.5);
+	background: rgba(195, 207, 201,0.5);
 	width: 60%;
 	padding: 20px;
 	float: left;
+	color: #111;
 }
 
 /* HOME PAGE */
@@ -134,22 +206,75 @@ aside{
 	
 }
 
+.page-thum{
+	/*background: red;*/
+	/*padding: 20px;*/
+	/*height: 600px;*/
+	text-align: center;
+}
+
 /* BLOG POSTS */
 .thum{
-	float: left;
-	background: blue;
+	/*float: left;*/
+	/*background: blue;*/
 	/*padding: 20px;*/
-	width: 30%;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 25px;
 }
 
 
 .with-thum{
-	background: red;
+	/*background: red;*/
 	float: left;
-	width: 70%;
+	width: 100%;
 }
 
 .no-thum{
 	width: 100%;
-	background: yellow;
+	/*background: yellow;*/
+}
+
+/* Youtube */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* TEST */
+
+
+/*
+
+li > a{
+	background: transparent;
+	transition: background 0.25s;
+}
+
+li > a:hover{
+	background: #eee !important;
+	transition: background 0.25s;
+}*/
+
+/*p img.aligncenter {
+	text-align: center !important;
+	margin: 0 auto;
+	max-width: 90%;
+	min-width: 50%;
+}*/
+
+
+aside.sneaky-aside,
+.sneaky-aside,
+#sneaky-aside{
+	background: transparent !important;
 }
