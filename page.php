@@ -33,7 +33,7 @@ echo '<li><a href="'.get_permalink($post->ID).'">'.get_the_title( $post->ID ).'<
 &nbsp;
 
 </aside>
-<div class="sub-container">
+<div class="sub-container no-side">
 <?php wp_reset_postdata(); ?>
 <?php get_template_part('content', 'images'); ?>
 
@@ -43,6 +43,7 @@ echo '<li><a href="'.get_permalink($post->ID).'">'.get_the_title( $post->ID ).'<
 	<?php the_content(); ?>
 	
 <?php endwhile; ?>
+<div class="padder"></div>
 </div>
 
 <?php get_footer(); ?>

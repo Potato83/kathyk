@@ -18,14 +18,17 @@ get_header(); ?>
        $args = array(
          'depth' => 1,
          'title_li' => '',
-         'child_of' => $post->ID
+         'child_of' => $post->ID,
+         'orderby' => 'menu_order',
+         'order'   => 'ASC'
        );
 
     } elseif($parent != 0) {
         $args = array(
              'depth' => 1,
              'title_li' => '',
-             'child_of' => $parent
+             'child_of' => $parent,
+             'orderby' => 'menu_order'
            );
     }
 
@@ -40,20 +43,26 @@ get_header(); ?>
     <div class="padder"></div>	
     <?php } ?>
 <!-- <h3>Grand Children</h3> -->
-<aside>
+<button type="button" class="pull-left btn btn-default visible-xs" id="sidebar-toggle" data-toggle="offcanvas" aria-expanded="false" aria-controls="navbar">
+  <i class="fa fa-navicon"></i>
+</button>
+<aside class="sidebar-offcanvas">
 
 
-
+<?php wp_reset_postdata(); ?>
 <?php
 $args = array( 
         'child_of' => $post->ID, 
         'parent' => $post->ID,
-        'depth' => 1
+        'depth' => 1,
+        'sort_column' => 'menu_order',
+        // 'order'   => 'DESC'
 );
 $mypages = get_pages( $args );
 //echo '<h1><a href="'.get_permalink( $id ).'">'.get_the_title( $id ).'</a></h1>';
 
 echo '<ul class="bottom-cat">';
+
 if(count($mypages) == 0){
     $javafix = true;
 }
@@ -83,7 +92,10 @@ echo '<li><a href="'.get_permalink($post->ID).'">'.get_the_title( $post->ID ).'<
     if(javafix){
         console.log('no side menu');
         $('aside').addClass("sneaky-aside");
+        $('.sub-container').addClass("sub-shift");
+        $('#sidebar-toggle').addClass('no-show');
     }else{
        console.log('side menu = true'); 
+       $('#sidebar-toggle').removeClass('no-show');
     }
 </script>

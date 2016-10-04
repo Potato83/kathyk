@@ -1,7 +1,14 @@
-body{
+body, html{
 	/*background: #ccc;*/
 	overflow-x: hidden;
 	background: url('../img/kkbio.jpg');
+	background: url('../img/rosebridge.jpeg');
+	background: url('../img/louisville.jpg');
+	/*background: #fff;*/
+	/*background: url('https://hd.unsplash.com/photo-1472518990562-608521b7bb11') no-repeat;*/
+	background: url('../img/bg.jpeg') no-repeat;
+	/*background: url('https://hd.unsplash.com/photo-1470273580401-4776370c1ae2');*/
+
 	/*background: #ddd;*/
 	background-size: cover;
 	background-attachment: fixed;
@@ -16,6 +23,10 @@ p{
 
 a{
 	color: #222;
+}
+
+hr{
+	border-top: 1px solid #aaa;
 }
 /*.site-content{
 	margin: 0;
@@ -39,7 +50,7 @@ a:hover{
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #ccc;
+  background-color: #666;
   border-radius: 1px;
 }
 
@@ -52,10 +63,47 @@ li{
 	text-transform:uppercase;
 }
 
+.navbar-header{
+	background: #ccc;
+}
+
+.logged-in .navbar-header{
+	background: #ccc;
+	/*height: 80px;*/
+	/*margin-top: -32px;*/
+	/*border-top: 60px solid blue;*/
+}
+
+.navbar-wrapper{
+	height: 50px;
+	background: #ccc;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+@media (max-width: 767px){
+	.navbar-wrapper{
+		background: red;
+		position: fixed;
+		top: 100px;
+		left: 100px;
+		height: 1000px;
+		z-index: 500;
+		display: block;
+	}
+}
+
+.logged-in .navbar-wrapper{
+	padding-top: 0;
+	margin-top: 0;
+	height: 35px;
+}
+
 ul.navbar-nav{	
 	background: #ccc;
 	width: 100%;	
 	text-align: center;
+	margin-top: 0;
 }
 
 ul.navbar-nav > li{
@@ -95,33 +143,35 @@ li.current-page-ancestor{
 	background: #fff;
 }
 
-#menu-primary > li.current_page_item:after,
-#menu-primary > li.current-page-ancestor:after {
-  display:block;
-  content: '';
-  border-bottom: solid 3px #019fb6; 
-  border-bottom: solid 3px #0208ae;
-  transform: scaleX(1); 
+/* Hover Biz */
+
+@media (min-width: 1025px){
+	#menu-primary > li.current_page_item:after,
+	#menu-primary > li.current-page-ancestor:after {
+	  display:block;
+	  content: '';
+	  border-bottom: solid 3px #019fb6; 
+	  border-bottom: solid 3px #0208ae;
+	  transform: scaleX(1); 
+	}
+
+	li:hover {
+		cursor: pointer;
+	}
+
+	#menu-primary > li:after {
+	  display:block;
+	  content: '';
+	  border-bottom: solid 3px #019fb6;  
+	  transform: scaleX(0);  
+	  transition: transform 250ms ease-in-out;
+	}
+	#menu-primary > li:hover:after { 
+		transform: scaleX(1); 
+	}
 }
 
-li:hover {
-	cursor: pointer;
-}
 
-#menu-primary > li:after {
-  display:block;
-  content: '';
-  border-bottom: solid 3px #019fb6;  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in-out;
-}
-#menu-primary > li:hover:after { 
-	transform: scaleX(1); 
-}
-
-/*li.current_page_ancestor{
-	background: pink;
-}*/
 
 .middle-cat{
 	background: #bbb;
@@ -132,9 +182,14 @@ li:hover {
 	width: 80%;
 }
 
-.middle-cat > li{	
+.middle-cat > li > a{
+	display: inline-block;
 	padding: 10px 30px;
-	/*border-radius: 5%;*/
+}
+
+.middle-cat > li{	
+	/*padding: 10px 30px;*/
+	border-radius: 15px;
 }
 
 .middle-cat > li.current_page_item,
@@ -148,8 +203,16 @@ li:hover {
 	background: rgba(201, 193, 193,0.5);
 }
 
+.bottom-cat > li > a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding: 17px 10px;
+}
+
 .bottom-cat > li{
-	padding: 15px 10px;
+	/*padding: 5px 0;*/
+	border-radius: 15px;
 }
 
 .bottom-cat > li.current_page_item{
@@ -169,6 +232,7 @@ aside{
 	float: left;
 	padding: 0;
 	/*height: 100%;*/
+	border-radius: 15px;
 }
 
 .bottom-cat{
@@ -187,6 +251,7 @@ aside{
 	width: 60%;
 	padding: 20px;
 	float: left;
+	margin-bottom: 50px;
 }
 
 .sub-container p {
@@ -199,18 +264,98 @@ aside{
 	padding: 20px;
 	float: left;
 	color: #111;
+	margin-bottom: 50px;
+	border-radius: 15px;
+}
+
+@media (max-width: 1024px){
+	.sub-container-home{
+		width: 90%;
+		margin: 0 5% 50px;
+	}
+	.sneaky-aside{
+		display: none;
+		width: 0;
+	}
+	.sub-container{
+		width: 78%;
+		
+	}
+
+	.sub-container.no-side{
+		width: 80%;
+		margin: 0 8% 50px;
+	}
+
+	.middle-cat{
+		width: 98%;
+	}
+	.sub-shift{
+		margin: 0 10%;
+	}
+}
+
+@media (max-width: 500px){
+	.sub-shift{
+		margin: 0 0 1% 0;
+		width: 96%;
+	}
 }
 
 /* HOME PAGE */
-.homepage{
-	
+
+.sub-container-home{
+	text-align: center;
 }
 
-.page-thum{
+.ul-home {
 	/*background: red;*/
-	/*padding: 20px;*/
-	/*height: 600px;*/
+	padding: 0;
+}
+
+.ul-home > li{
+	display: block;
+	font-size: 16px;
+	padding: 5px;
+}
+
+.big-head{
+	font-size: 70px;
+	text-transform: uppercase;
+	/*color: red;*/
+	margin: 10px 10px 25px;
+	padding: 8px;
+}
+
+
+.page-thum{
 	text-align: center;
+	margin: 0 8% 30px;
+	position: relative;
+  width: 84%;
+  padding-bottom: 60%;
+  float: left;
+  height: 0;
+}
+
+.small-thum{
+	text-align: center;
+	margin: 0 8% 30px;
+	position: relative;
+  width: 25%;
+  padding-bottom: 16%;
+  float: left;
+  height: 0;
+}
+
+.page-thum img,
+.small-thum img{
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
 }
 
 /* BLOG POSTS */
@@ -253,28 +398,62 @@ aside{
 /* TEST */
 
 
-/*
-
-li > a{
-	background: transparent;
-	transition: background 0.25s;
+#sidebar-toggle{
+	background: #ccc;
+	margin-left: -8px;
+	margin-right: 8px;
 }
 
-li > a:hover{
-	background: #eee !important;
-	transition: background 0.25s;
-}*/
+.btn:focus{
+	outline: none;
+}
 
-/*p img.aligncenter {
-	text-align: center !important;
-	margin: 0 auto;
-	max-width: 90%;
-	min-width: 50%;
-}*/
+.fa-navicon{
+	color: #666;
+}
 
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+   
+  .sidebar-offcanvas {
+    position: absolute;
+    display: none;
+  }
+
+  .sidebar-offcanvas.active {
+    display: block;  
+    left: 55px;
+    top: 195px;
+    z-index: 1;
+    position: absolute;
+    width: 75%; 
+    background: #aaa;
+  }
+
+  .big-head{
+  	font-size: 40px;
+  }
+
+  .sub-container{
+  	width: 96%;
+  	margin: 20px 2% 50px;
+  }
+
+
+}
+
+/* end test */
 
 aside.sneaky-aside,
 .sneaky-aside,
 #sneaky-aside{
 	background: transparent !important;
+}
+
+.no-show{
+	display: none !important;
+	background: red;
 }

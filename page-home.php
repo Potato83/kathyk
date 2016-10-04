@@ -11,8 +11,9 @@ get_header(); ?>
 	&nbsp;
 	</aside>
 	<div class="sub-container-home">
+	<?php get_template_part('content', 'home'); ?>
 	<?php wp_reset_postdata(); ?>
-	<?php get_template_part('content', 'images'); ?>
+	<?php //get_template_part('content', 'images'); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 						
 		<?php the_content(); ?>

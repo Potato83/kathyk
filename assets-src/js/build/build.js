@@ -2363,10 +2363,28 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 $(function() {
-    console.log( "ready!" );
+  console.log( "ready!" );
+
+  $('#test').click(function(){
+		alert('Javascript and jQuery are working');
+	});
+
+	$('[data-toggle="offcanvas"]').click(function () {
+	    $('.sidebar-offcanvas').toggleClass('active')
+	  });
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
-$('#test').click(function(){
-	alert('Javascript and jQuery are working');
-});
+
 

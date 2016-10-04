@@ -39,7 +39,10 @@ get_header(); ?>
      </div>
     <?php } ?>
 <!-- <h3>Grand Children</h3> -->
-<aside>
+<button type="button" class="pull-left btn btn-default visible-xs" id="sidebar-toggle" data-toggle="offcanvas" aria-expanded="false" aria-controls="navbar">
+  <i class="fa fa-navicon"></i>
+</button>
+<aside class="sidebar-offcanvas">
 <?php
         
     $parent = $post->post_parent;
