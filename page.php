@@ -17,16 +17,18 @@ $args = array(
 
 );
 $mypages = get_pages( $args );
-
-echo '<ul class="middle-cat">';
+if($mypages){
+	echo '<ul class="middle-cat">';
 foreach( $mypages as $post )
 {
 echo '<li><a href="'.get_permalink($post->ID).'">'.get_the_title( $post->ID ).'</a></li>';
-
 }
+ echo '</ul>';
 
+}else{
+	echo '';
+}
 ?>
-</ul>
 
 
 <aside class="sneaky-aside">

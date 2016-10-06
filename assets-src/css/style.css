@@ -9,7 +9,8 @@ body, html{
 	background: url('../img/bg.jpeg') no-repeat;
 	/*background: url('https://hd.unsplash.com/photo-1470273580401-4776370c1ae2');*/
 
-	/*background: #ddd;*/
+	background: #ddd;
+	background: url('https://hd.unsplash.com/photo-1414963583957-d06d3d204d10');
 	background-size: cover;
 	background-attachment: fixed;
 	min-height: 100vh;
@@ -28,6 +29,8 @@ a{
 hr{
 	border-top: 1px solid #aaa;
 }
+
+
 /*.site-content{
 	margin: 0;
 	padding: 0;
@@ -143,43 +146,68 @@ li.current-page-ancestor{
 	background: #fff;
 }
 
-/* Hover Biz */
-
-@media (min-width: 1025px){
-	#menu-primary > li.current_page_item:after,
-	#menu-primary > li.current-page-ancestor:after {
-	  display:block;
-	  content: '';
-	  border-bottom: solid 3px #019fb6; 
-	  border-bottom: solid 3px #0208ae;
-	  transform: scaleX(1); 
-	}
-
 	li:hover {
 		cursor: pointer;
 	}
 
-	#menu-primary > li:after {
-	  display:block;
-	  content: '';
-	  border-bottom: solid 3px #019fb6;  
-	  transform: scaleX(0);  
-	  transition: transform 250ms ease-in-out;
-	}
-	#menu-primary > li:hover:after { 
-		transform: scaleX(1); 
-	}
+/* Hover Biz */
+
+.middle-cat > li.current_page_item a,
+.middle-cat > li.current_page_ancestor a{
+	/*background: #eee;
+	background: rgba(238, 238, 238,0.5);*/
+	/*color: #ccc;*/
+	text-shadow: 2px 2px #aaa;
+}
+
+.middle-cat > li:hover{
+	/*background: #c9c1c1;
+	background: rgba(201, 193, 193,0.5);*/
+
+}
+
+#menu-primary > li.current_page_item:after,
+#menu-primary > li.current-page-ancestor:after/*,
+.middle-cat > li.current_page_item a,
+.middle-cat > li.current_page_ancestor a*/ {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6; 
+  /*border-bottom: solid 3px #0208ae;*/
+  transform: scaleX(1); 
 }
 
 
 
+#menu-primary > li:after/*,
+.middle-cat > li.current_page_item a:after,
+.middle-cat > li.current_page_ancestor a:after*/ {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+#menu-primary > li:hover:after,
+.middle-cat > li:hover:after { 
+	transform: scaleX(1); 
+}
+
+
+
+
 .middle-cat{
-	background: #bbb;
-	background: rgba(187,187,187,0.7);
+	/*background: #bbb;
+	background: rgba(187,187,187,0.7);*/
 	/*padding: 0;*/
 	/*text-align: center;*/
-	border-radius: 5px;
-	width: 80%;
+	/*border-radius: 5px;*/
+	width: 60%;
+	margin: 0 auto;
+	padding: 0 0 15px;
+	border-bottom: 2px solid #555;
+	text-align: center;
+
 }
 
 .middle-cat > li > a{
@@ -189,19 +217,10 @@ li.current-page-ancestor{
 
 .middle-cat > li{	
 	/*padding: 10px 30px;*/
-	border-radius: 15px;
+	/*border-radius: 15px;*/
 }
 
-.middle-cat > li.current_page_item,
-.middle-cat > li.current_page_ancestor{
-	background: #eee;
-	background: rgba(238, 238, 238,0.5);
-}
 
-.middle-cat > li:hover{
-	background: #c9c1c1;
-	background: rgba(201, 193, 193,0.5);
-}
 
 .bottom-cat > li > a{
 	display: inline-block;
@@ -212,27 +231,30 @@ li.current-page-ancestor{
 
 .bottom-cat > li{
 	/*padding: 5px 0;*/
-	border-radius: 15px;
+	/*border-radius: 15px;*/
 }
 
 .bottom-cat > li.current_page_item{
-	background: rgba(200,200,200,0.8);
+	/*background: rgba(200,200,200,0.8);*/
+	/*border-bottom: 2px solid #555;*/
+	text-shadow: 2px 2px #aaa;
 }
 
 .bottom-cat > li:hover{
-	background: #bbb;
-	background: rgba(187,187,187,0.5);
+	/*background: #bbb;
+	background: rgba(187,187,187,0.5);*/
 }
 
 aside{
-	background: #aaa;
-	background: rgba(187,187,187,0.7);
+	/*background: #aaa;
+	background: rgba(187,187,187,0.7);*/
 	width: 18%;
 	margin-right: 2%;
 	float: left;
-	padding: 0;
+	padding: 0 15px 0 0;
 	/*height: 100%;*/
-	border-radius: 15px;
+	/*border-radius: 15px;*/
+	/*border-right: 2px solid #555;*/
 }
 
 .bottom-cat{
@@ -244,14 +266,17 @@ aside{
 }
 
 .sub-container{
-	background: rgba(0,255,0,0.5);
-	background: rgba(195, 207, 201,0.5);
-	border-radius: 15px;
+	/*background: rgba(0,255,0,0.5);
+	background: rgba(195, 207, 201,0.5);*/
+	/*border-radius: 15px;*/
+	background: #ccc;
 	color: #111;
 	width: 60%;
 	padding: 20px;
 	float: left;
 	margin-bottom: 50px;
+/*	border-left: 2px solid #555;
+	border-right: 2px solid #555;*/
 }
 
 .sub-container p {
@@ -259,7 +284,7 @@ aside{
 }
 
 .sub-container-home{
-	background: rgba(195, 207, 201,0.5);
+	/*background: rgba(195, 207, 201,0.5);*/
 	width: 60%;
 	padding: 20px;
 	float: left;
@@ -288,7 +313,7 @@ aside{
 	}
 
 	.middle-cat{
-		width: 98%;
+		width: 80%;
 	}
 	.sub-shift{
 		margin: 0 10%;
@@ -330,10 +355,10 @@ aside{
 
 .page-thum{
 	text-align: center;
-	margin: 0 8% 30px;
+	margin: 0 25% 30px;
 	position: relative;
-  width: 84%;
-  padding-bottom: 60%;
+  width: 50%;
+  padding-bottom: 40%;
   float: left;
   height: 0;
 }
