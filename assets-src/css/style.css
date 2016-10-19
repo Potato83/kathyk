@@ -19,15 +19,45 @@ body, html{
 }
 
 p{
-	font-size: 18px;
+	font-size: 18px !important;
+	/*color: red;*/
+	text-align: justify;
+}
+
+.center{
+	text-align: center !important;
 }
 
 a{
 	color: #222;
 }
 
+a:hover{
+	/*color: #8ea1a5;*/
+}
+
 hr{
 	border-top: 1px solid #aaa;
+}
+
+.badge.social {  
+  font-size: 14px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 32px;
+  padding: 0;
+  /*border-radius: 20px;*/
+  color: white !important;
+}
+
+.badge.social.facebook{
+	background: #3b5998;
+}
+
+.badge.social.facebook:hover{
+	color: white;
+	background: #2a4887;
 }
 
 
@@ -116,7 +146,7 @@ ul.navbar-nav > li{
 
 .sub-cats{
 	width: 200px;
-	background: red;
+	/*background: red;*/
 	position: relative;
 	top: 80px;
 	left: 0;
@@ -142,7 +172,8 @@ li.current-menu-item{
 }
 
 #menu-primary > li.current_page_item,
-li.current-page-ancestor{
+li.current-page-ancestor,
+li.grandpa{
 	background: #fff;
 }
 
@@ -167,7 +198,8 @@ li.current-page-ancestor{
 }
 
 #menu-primary > li.current_page_item:after,
-#menu-primary > li.current-page-ancestor:after/*,
+#menu-primary > li.current-page-ancestor:after,
+#menu-primary > li.grandpa:after/*,
 .middle-cat > li.current_page_item a,
 .middle-cat > li.current_page_ancestor a*/ {
   display:block;
@@ -249,11 +281,12 @@ aside{
 	/*background: #aaa;
 	background: rgba(187,187,187,0.7);*/
 	width: 18%;
+	/*background: #ddd !important;*/
 	margin-right: 2%;
 	float: left;
 	padding: 0 15px 0 0;
 	/*height: 100%;*/
-	/*border-radius: 15px;*/
+	border-radius: 15px;
 	/*border-right: 2px solid #555;*/
 }
 
@@ -271,7 +304,7 @@ aside{
 	/*border-radius: 15px;*/
 	background: #ccc;
 	background: #9EAFC6;
-	/*background: transparent;*/
+	background: transparent;
 	color: #111;
 	width: 60%;
 	padding: 20px;
@@ -282,7 +315,7 @@ aside{
 }
 
 .sub-container p {
-	font-size: 22px;
+	font-size: 18px;
 }
 
 .sub-container-home{
@@ -311,8 +344,8 @@ aside{
 	}
 
 	.sub-container.no-side{
-		width: 80%;
-		margin: 0 8% 50px;
+		width: 100%;
+		margin: 0 auto 50px;
 	}
 
 	.middle-cat{
@@ -323,10 +356,14 @@ aside{
 	}
 }
 
-@media (max-width: 500px){
+@media screen and (max-width: 500px){
 	.sub-shift{
 		margin: 0 0 1% 0;
 		width: 96%;
+	}
+	p{
+		font-size: 15px !important;
+		/*color: red !important;*/
 	}
 }
 
@@ -351,19 +388,21 @@ aside{
 	font-size: 70px;
 	text-transform: uppercase;
 	/*color: red;*/
-	margin: 10px 10px 25px;
+	margin: 10px 10px 0px;
 	padding: 8px;
 }
 
 
 .page-thum{
 	text-align: center;
-	margin: 0 25% 30px;
+	margin: 0 5% 30px;
 	position: relative;
-  width: 50%;
-  padding-bottom: 40%;
+  width: 90%;
+  /*padding-bottom: 40%;*/
   float: left;
-  height: 0;
+  /*height: 0;*/
+  /*margin: 0 auto;*/
+  /*background: green;*/
 }
 
 .small-thum{
@@ -371,19 +410,24 @@ aside{
 	margin: 0 8% 30px;
 	position: relative;
   width: 25%;
-  padding-bottom: 16%;
+  /*padding-bottom: 16%;*/
   float: left;
   height: 0;
+  margin: 0 auto;
+  /*background: red;*/
 }
 
 .page-thum img,
 .small-thum img{
-	max-width: 100%;
+	/*max-width: 100%;
 	max-height: 100%;
 	width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
+  left: 0;*/
+  max-width: 250px;
+  max-height: 175px;
+
 }
 
 /* BLOG POSTS */
@@ -458,7 +502,7 @@ aside{
     z-index: 1;
     position: absolute;
     width: 75%; 
-    background: #aaa;
+    background: #dfdfdf;
   }
 
   .big-head{
@@ -466,8 +510,14 @@ aside{
   }
 
   .sub-container{
-  	width: 96%;
-  	margin: 20px 2% 50px;
+  	width: 100%;
+  	margin: 20px 0 50px;
+  	/*background: green;*/
+  }
+
+  .sub-container p a{
+  	/*font-size: 18px;*/
+  	word-wrap: break-word;
   }
 
 

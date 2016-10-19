@@ -4,7 +4,9 @@ Template Name: Grand Children
  */
 get_header(); ?>
 <div class="padder"></div>
-<div class="padder"></div>
+
+
+<?php wp_reset_postdata(); ?>
 
 <!-- <h1>this is the grand children template aka page-bottom.php</h1> -->
 <?php

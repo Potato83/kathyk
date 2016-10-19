@@ -5,7 +5,7 @@ Template Name: Default
 get_header(); ?>
 <?php //wpb_list_child_pages(); ?>
 <div class="padder"></div>
-<div class="padder"></div>
+
 
 
 <!-- <h1>this is the default template aka page.php</h1> -->

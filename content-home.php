@@ -9,4 +9,14 @@
 	<li>Choral direction and composition, vocal arrangement</li>
 	<li>Workshops and private lessons in voice</li>
 </ul>
+<p class="center"><a href="http://www.facebook.com/kathy.kennedy.123276" target="_blank">Visit my Facebook page</a></p>
+<!-- <p class="center">
+	<a href="http://www.facebook.com/kathy.kennedy.123276" class="badge social facebook" target="_blank">
+		<i class="fa fa-facebook"></i>
+	</a>
+</p> -->
 
+
+<p class="center">
+	Subscribe to my newsletter
+</p>

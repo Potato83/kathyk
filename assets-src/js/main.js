@@ -9,17 +9,7 @@ $(function() {
 	    $('.sidebar-offcanvas').toggleClass('active')
 	  });
 
-
-
-
-
-
-
-
-
-
-
-
+		
 });
 
 

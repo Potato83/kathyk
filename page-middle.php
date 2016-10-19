@@ -4,8 +4,7 @@ Template Name: Middle Children
  */
 get_header(); ?>
 <div class="padder"></div>
-<div class="padder"></div>
-<!-- <h1>this is the middle children template aka page-middle.php</h1> -->
+
 <!-- <h1>Middle Children</h1> -->
 
 
@@ -59,7 +58,6 @@ $args = array(
         // 'order'   => 'DESC'
 );
 $mypages = get_pages( $args );
-//echo '<h1><a href="'.get_permalink( $id ).'">'.get_the_title( $id ).'</a></h1>';
 
 echo '<ul class="bottom-cat">';
 

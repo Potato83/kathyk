@@ -5,7 +5,7 @@ Template Name: Orphan Children
 get_header(); ?>
 <div class="padder"></div>
 <div class="padder"></div>
-<div class="padder"></div>
+
 <!-- <h1>this is the grand children template aka page-bottom.php</h1> -->
 
 
